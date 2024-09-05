@@ -5,9 +5,3 @@
     background-color: rgb(209, 208, 208);
     height: 150px;
 }
-
-.containerBtn {
-    display: flex;
-    justify-content: space-evenly;
-    width: 300px;
-}

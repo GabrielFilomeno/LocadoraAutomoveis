@@ -1,0 +1,17 @@
+<h1>Favoritos</h1>
+
+<div class="containerInput">
+    <input type="text" [(ngModel)]="pesquisar" id="pesquisar" placeholder="Pesquisar">
+    <app-botao class="btnPesquisar" (click)="realizarPesquisa()" label="Pesquisar"></app-botao>
+    <app-botao *ngIf="btnVoltar" class="btnPesquisar" (click)="voltar()" label="Voltar"></app-botao>
+
+</div>
+<div class="container">
+    <div id="containerCard" *ngFor="let card of lista; let i = index">
+            <span id="nomeCarro">{{card.nome}}</span>
+            <img src="{{card.imagem}}" alt="Automóvel" id="img">
+            <span>{{card.ano | pipeAno}}</span>
+            <span>Preço por dia: R$ {{card.precoPorDia}}</span>
+            <app-botao label="Ver Mais" (click)="verMais(card.id)"></app-botao>
+    </div>
+</div>

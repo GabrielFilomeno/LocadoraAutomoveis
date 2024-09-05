@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ListagemAutomoveisComponent } from './pages/listagem-automoveis/listagem-automoveis.component';
 import { DetalhesAutomovelComponent } from './pages/detalhes-automovel/detalhes-automovel.component';
+import { CardsFavortiosComponent } from './componentes/cards-favortios/cards-favortios.component';
 
 export const routes: Routes = [
     {
@@ -9,10 +10,14 @@ export const routes: Routes = [
     },
     {
         path: 'listagem',
-        component: ListagemAutomoveisComponent
+        component: ListagemAutomoveisComponent,
     },
     {
-        path: 'detalhes',
+        path: 'detalhes/:id',
         component: DetalhesAutomovelComponent
+    },
+    {
+        path: 'favoritos',
+        component: CardsFavortiosComponent
     }
 ];

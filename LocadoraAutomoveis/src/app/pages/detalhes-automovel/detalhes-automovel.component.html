@@ -1,1 +1,13 @@
-<p>detalhes-automovel works!</p>
+<div class="container">
+    <div class="containerDetalhes">
+        <div id="nomeCarro">{{automovel.nome}}</div>
+        <img src="{{automovel.imagem}}" alt="Automóvel" id="img">
+        <div>{{automovel.ano | pipeAno}}</div>
+        <div>{{automovel.tipo}}</div>
+        <div>Preço por dia: R$ {{automovel.precoPorDia}}</div>
+        <div>{{automovel.descricao}}</div>
+        <button (click)="favoritar()">{{favoritoCoracao}}</button>
+        <app-botao label="Alugar" (click)="alugar()"></app-botao>
+        <app-botao label="Voltar" (click)="voltar()"></app-botao>
+    </div>
+</div>
